@@ -1,0 +1,45 @@
+.data {
+  background-color: $color-claro2;
+
+  &--container {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+
+    @include flex;
+    @include media(desktop-s) {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 50px auto 20px;
+    }
+
+    &--logo {
+      width: 150px;
+      margin: -50px 0 15px;
+      z-index: 2;
+      @include media(desktop-s) {
+        width: 140px;
+      }
+    }
+    &--text {
+      border-radius: 4px;
+      padding: 10px 20px;
+      margin: 0 0 20px;
+      z-index: 2;
+      background-color: $color-claro;
+      @include shadow;
+
+      & p {
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        margin: 5px 0;
+        color: $color-variacion2;
+        font-family: $Fuente1;
+        @include media(desktop-s) {
+          font-size: 0.9em;
+        }
+      }
+    }
+  }
+}

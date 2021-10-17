@@ -1,0 +1,73 @@
+.footer {
+  padding: 20px 0;
+  background-color: #333;
+  font-family: $Fuente2;
+  @include shadow-in;
+  @include flex;
+  &--container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    @include media(desktop-s) {
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: row;
+    }
+    &--tel {
+      margin-top: 170px;
+      @include flex;
+      @include media(desktop-s) {
+        width: 25%;
+      }
+      & p {
+        text-align: center;
+        font-size: 1em;
+        color: $color-claro;
+        @include media(desktop-s) {
+          font-size: 1.1em;
+        }
+        & span {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+    }
+    &--logo {
+      position: absolute;
+      @include media(desktop-s) {
+        width: 25%;
+        @include flex;
+      }
+
+      & img {
+        width: 150px;
+        @include media(desktop-s) {
+          width: 130px;
+        }
+      }
+    }
+    &--direc {
+      @include flex;
+      margin-top: 10px;
+      @include media(desktop-s) {
+        width: 25%;
+        margin-top: 0;
+      }
+      & p {
+        color: $color-claro;
+        font-weight: 400;
+        font-size: 1em;
+        text-align: center;
+        @include media(desktop-s) {
+          font-size: 1.1em;
+        }
+        & span {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

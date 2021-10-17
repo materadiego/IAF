@@ -1,0 +1,156 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  z-index: 6;
+  transition: 0.3s;
+  background-color: $color-claro2;
+  @include shadow-in;
+
+  @include media(desktop-s) {
+    height: 100px;
+    position: relative;
+    @include shadow-in;
+  }
+  &--container {
+    width: 100%;
+    padding-bottom: 30px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    @include media(desktop-s) {
+      width: 90%;
+      flex-direction: row;
+      margin: 0 auto;
+      padding-bottom: 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &--img-container {
+      width: 130px;
+      margin-top: 30px;
+      @include media(desktop-s) {
+        margin: 0 0 0 50px;
+        width: 80px;
+      }
+      &--img {
+        width: 100%;
+      }
+    }
+    &--navigation {
+      display: flex;
+
+      @include media(desktop-s) {
+        width: 850px;
+        height: 40px;
+        margin-right: 50px;
+        align-items: flex-end;
+      }
+      &--ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        @include media(desktop-s) {
+          flex-direction: row;
+        }
+        &--li {
+          list-style: none;
+          margin: 5px 0;
+          text-align: center;
+          @include media(desktop-s) {
+            margin: 0;
+          }
+          & a {
+            text-decoration: none;
+            color: $color-variacion2;
+            font-weight: 500;
+            font-size: 1.4em;
+            transition: 0.3s;
+            will-change: color;
+            @include media(mobile-l) {
+            }
+            @include media(desktop-s) {
+              font-size: 1.2em;
+            }
+            &:hover {
+              color: $color-variacion;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.qo {
+  color: $color-variacion2;
+  font-weight: 500;
+  font-size: 1.4em;
+  transition: 0.3s;
+  cursor: pointer;
+
+  position: relative;
+  will-change: color;
+  @include media(desktop-s) {
+    font-size: 1.2em;
+  }
+}
+
+.options {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 80%;
+  padding: 10px 10px 0;
+  transition: 0.3s;
+  background-color: $color-claro2;
+  @include media(desktop-s) {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 120%;
+    margin: -10px 0 0 -10%;
+  }
+}
+
+.options a {
+  font-size: 0.8em;
+  padding: 10px 0;
+  border-top: 2px solid $color-variacion2;
+  @include media(desktop-s) {
+    font-size: 0.95em;
+  }
+}
+
+.qo:hover {
+  color: $color-variacion;
+}
+
+.qo:hover .options {
+  @include media(desktop-s) {
+    margin-top: 0px;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.header {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  @include media(desktop-s) {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.menu-is-active {
+  opacity: 1;
+  pointer-events: all;
+}
