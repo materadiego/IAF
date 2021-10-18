@@ -1,0 +1,120 @@
+.contacto {
+  &--container {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    flex-direction: column;
+    @include media(desktop-s) {
+      padding-bottom: 50px;
+    }
+    @include flex;
+    & h5 {
+      text-align: center;
+      font-weight: 600;
+      @include media(desktop-s) {
+        font-size: 1em;
+      }
+    }
+    & form {
+      width: 100%;
+      padding: 20px 0 0;
+      flex-direction: column;
+      @include flex;
+      @include media(tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 600px;
+      }
+      & input {
+        width: 260px;
+        font-size: 1em;
+        padding: 5px;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        outline: none;
+        font-family: $Fuente2;
+        @include shadow;
+        @include media(mobile-l) {
+          width: 300px;
+        }
+
+        @include media(mobile-xl) {
+          width: 350px;
+        }
+        @include media(tablet) {
+          width: 295px;
+          margin-bottom: 10px;
+        }
+        &:invalid {
+          border: 2px solid $color-variacion;
+        }
+        &:valid {
+          border: 2px solid $color-variacion2;
+        }
+      }
+      & textarea {
+        width: 260px;
+        max-width: 260px;
+        min-width: 260px;
+        max-height: 150px;
+        min-height: 150px;
+        font-size: 1em;
+        padding: 5px;
+        outline: none;
+        border-radius: 3px;
+
+        margin-bottom: 25px;
+        font-family: $Fuente2;
+        @include shadow;
+        @include media(mobile-l) {
+          max-width: 300px;
+          min-width: 300px;
+        }
+        @include media(mobile-xl) {
+          min-width: 350px;
+          max-width: 350px;
+        }
+        @include media(tablet) {
+          max-width: 600px;
+          min-width: 600px;
+        }
+        &:invalid {
+          border: 2px solid $color-variacion;
+        }
+        &:valid {
+          border: 2px solid $color-variacion2;
+        }
+      }
+
+      & button {
+        width: 120px;
+        padding: 5px 0;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        transition: 0.3s;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: $color-claro;
+        font-family: $Fuente1;
+        background-color: $color-variacion2;
+        @include shadow-in;
+        @include media(mobile-l) {
+          width: 150px;
+          margin: 0 auto;
+        }
+        @include media(desktop-s) {
+          padding: 10px 0;
+        }
+        &:hover {
+          @include media(desktop-s) {
+            color: $color-variacion;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,15 @@
 .data {
   background-color: $color-claro2;
+  padding: 10px 0 30px;
 
   &--container {
     width: 100%;
     margin: 0 auto;
     flex-direction: column;
-
+    width: 340px;
+    border-radius: 4px;
+    background-color: $color-claro;
+    @include shadow;
     @include flex;
     @include media(desktop-s) {
       flex-direction: row;
@@ -22,13 +26,11 @@
       }
     }
     &--text {
-      border-radius: 4px;
-      padding: 10px 20px;
       margin: 0 0 20px;
       z-index: 2;
-      background-color: $color-claro;
-      @include shadow;
 
+      @include media(mobile-xl) {
+      }
       & p {
         font-size: 1em;
         font-weight: 600;

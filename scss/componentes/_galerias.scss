@@ -4,8 +4,12 @@
   &--container {
     width: 100%;
     margin: 0 auto;
-    @include media(desktop-s) {
+
+    @include media(mobile-xl) {
       width: 80%;
+    }
+
+    @include media(desktop-s) {
     }
     &--title {
       width: 100%;
@@ -23,6 +27,7 @@
         font-weight: 600;
         text-align: center;
         font-size: 0.9em;
+        justify-content: center;
         @include media(desktop-s) {
           font-size: 1.2em;
           margin-top: 10px;
@@ -35,6 +40,9 @@
       flex-direction: column-reverse;
       padding-bottom: 25px;
       background-color: $color-claro2;
+      @include media(mobile-xl) {
+        @include shadow;
+      }
       @include media(desktop-s) {
         height: 280px;
         flex-direction: row;
@@ -46,6 +54,9 @@
         flex-direction: column;
 
         @include flex;
+        @include media(tablet) {
+          padding: 20px 0;
+        }
         @include media(desktop-s) {
           width: 50%;
           margin: 0 auto;
@@ -80,6 +91,9 @@
     background-color: $color-claro2;
     @include shadow;
     @include flex;
+    @include media(mobile-xl) {
+      width: 65%;
+    }
     @include media(desktop-s) {
       width: 600px;
       margin: 60px auto 0;
@@ -97,7 +111,7 @@
 }
 
 .inverse {
-  @include media(tablet) {
+  @include media(desktop-s) {
     flex-direction: row-reverse;
   }
 }
