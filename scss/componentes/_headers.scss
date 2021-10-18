@@ -121,7 +121,7 @@
   flex-direction: column;
   width: 80%;
   z-index: 5;
-  padding: 10px 10px 0;
+  padding: 10px 0px 0;
   transition: 0.3s;
   background-color: $color-claro2;
   @include media(desktop-s) {

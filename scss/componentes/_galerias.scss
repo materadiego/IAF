@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column-reverse;
       padding-bottom: 25px;
-      background-color: $color-claro2;
+      background-color: $color-claro;
       @include media(mobile-xl) {
         @include shadow;
       }

@@ -627,7 +627,7 @@ h6 {
   flex-direction: column;
   width: 80%;
   z-index: 5;
-  padding: 10px 10px 0;
+  padding: 10px 0px 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -967,7 +967,7 @@ h6 {
     font-weight: 600; }
     @media only screen and (min-width: 992px) {
       .contacto--container h5 {
-        font-size: 1em; } }
+        font-size: 1.3em; } }
   .contacto--container form {
     width: 100%;
     padding: 20px 0 0;
@@ -1016,6 +1016,14 @@ h6 {
         .contacto--container form input {
           width: 295px;
           margin-bottom: 10px; } }
+      .contacto--container form input::-webkit-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form input:-ms-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form input::-ms-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form input::placeholder {
+        color: #3e4095; }
       .contacto--container form input:invalid {
         border: 2px solid #ed3237; }
       .contacto--container form input:valid {
@@ -1046,6 +1054,14 @@ h6 {
         .contacto--container form textarea {
           max-width: 600px;
           min-width: 600px; } }
+      .contacto--container form textarea::-webkit-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form textarea:-ms-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form textarea::-ms-input-placeholder {
+        color: #3e4095; }
+      .contacto--container form textarea::placeholder {
+        color: #3e4095; }
       .contacto--container form textarea:invalid {
         border: 2px solid #ed3237; }
       .contacto--container form textarea:valid {
@@ -1138,7 +1154,7 @@ h6 {
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
       padding-bottom: 25px;
-      background-color: #f0f0f0; }
+      background-color: #fefefe; }
       @media only screen and (min-width: 480px) {
         .galeria--container--box {
           -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
@@ -1266,16 +1282,17 @@ h6 {
   background: red; }
 
 .data {
-  background-color: #f0f0f0;
+  background-color: #fefefe;
   padding: 10px 0 30px; }
   .data--container {
     width: 100%;
-    margin: 0 auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 340px;
+    width: 300px;
+    margin: 0 auto 0;
+    position: relative;
     border-radius: 4px;
     background-color: #fefefe;
     -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
@@ -1298,17 +1315,26 @@ h6 {
         -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
-        margin: 50px auto 20px; } }
+        margin: -70px auto 20px;
+        width: 600px;
+        position: relative;
+        padding: 30px 0; } }
     .data--container--logo {
       width: 150px;
       margin: -50px 0 15px;
       z-index: 2; }
       @media only screen and (min-width: 992px) {
         .data--container--logo {
-          width: 140px; } }
+          width: 180px;
+          margin: 0 15px; } }
     .data--container--text {
       margin: 0 0 20px;
-      z-index: 2; }
+      z-index: 2;
+      border-top: 2px solid #3e4095;
+      border-bottom: 2px solid #3e4095; }
+      @media only screen and (min-width: 480px) {
+        .data--container--text {
+          margin: 0; } }
       .data--container--text p {
         font-size: 1em;
         font-weight: 600;
@@ -1318,7 +1344,7 @@ h6 {
         font-family: "Montserrat", sans-serif; }
         @media only screen and (min-width: 992px) {
           .data--container--text p {
-            font-size: 0.9em; } }
+            font-size: 1.3em; } }
 
 .nosotros {
   display: -webkit-box;
@@ -1395,6 +1421,12 @@ h6 {
     .nosotros--container--donde {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      width: 100%;
+      border-radius: 4px;
+      margin: 30px auto 20px;
+      background-color: #fefefe;
+      -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1404,15 +1436,14 @@ h6 {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
+      @media only screen and (min-width: 480px) {
+        .nosotros--container--donde {
+          width: 100%; } }
       @media only screen and (min-width: 992px) {
         .nosotros--container--donde {
           width: 80%;
           padding: 0 30px;
-          margin: 60px auto 40px;
-          border-radius: 4px;
-          background-color: #fefefe;
-          -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3); } }
+          margin: 60px auto 40px; } }
       .nosotros--container--donde h5 {
         text-transform: uppercase;
         text-align: center;
@@ -1428,29 +1459,26 @@ h6 {
             padding: 20px 0 20px; } }
       .nosotros--container--donde--text {
         font-weight: 500;
-        width: 85%;
+        width: 90%;
         margin: 0 0 20px;
         font-size: 0.9em;
         text-align: center;
         color: #3e4095; }
-        @media only screen and (min-width: 480px) {
-          .nosotros--container--donde--text {
-            width: 100%; } }
         @media only screen and (min-width: 992px) {
           .nosotros--container--donde--text {
             font-size: 1em;
             padding-left: 10px;
             text-align: start; } }
       .nosotros--container--donde iframe {
-        width: 80%;
-        height: 300px;
+        width: 90%;
+        height: 200px;
         margin: 0 0 20px;
         border-radius: 4px;
         -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 480px) {
           .nosotros--container--donde iframe {
-            width: 100%; } }
+            width: 95%; } }
         @media only screen and (min-width: 768px) {
           .nosotros--container--donde iframe {
             height: 300px; } }
