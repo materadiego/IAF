@@ -417,8 +417,8 @@ h6 {
   color: #3e4095; }
   @media only screen and (min-width: 992px) {
     h6 {
-      font-size: 1.5em;
-      margin: 0; } }
+      font-size: 1.2em;
+      margin: 0 0 5px; } }
 
 .menu-container,
 .menux-container {
@@ -1099,8 +1099,54 @@ h6 {
         .contacto--container form button:hover {
           color: #ed3237; } }
 
-.instalaciones--container {
-  height: 300px; }
+.instalaciones {
+  padding-bottom: 20px;
+  background-color: #f0f0f0; }
+  @media only screen and (min-width: 480px) {
+    .instalaciones--container {
+      width: 90%;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 768px) {
+    .instalaciones--container {
+      width: 80%; } }
+  @media only screen and (min-width: 992px) {
+    .instalaciones--container {
+      width: 700px; } }
+  @media only screen and (min-width: 480px) {
+    .instalaciones--container--galeria {
+      overflow: hidden;
+      -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3); } }
+
+.swiper-slide img {
+  width: 100%; }
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fefefe;
+  -webkit-transform: scale(0.4);
+  -ms-transform: scale(0.4);
+  transform: scale(0.4); }
+  @media only screen and (min-width: 992px) {
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7); } }
+
+@media only screen and (min-width: 992px) {
+  .swiper-pagination {
+    padding-bottom: 25px; } }
+
+.swiper-pagination-bullet {
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  background: #fefefe;
+  border: 2px solid #fefefe; }
+
+.swiper-pagination-bullet-active {
+  background: red; }
 
 .galeria {
   padding-bottom: 20px;
@@ -1154,19 +1200,18 @@ h6 {
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
       padding-bottom: 25px;
-      background-color: #fefefe; }
-      @media only screen and (min-width: 480px) {
-        .galeria--container--box {
-          -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3); } }
+      background-color: #f0f0f0; }
       @media only screen and (min-width: 992px) {
         .galeria--container--box {
-          height: 280px;
+          height: 250px;
           -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
           -ms-flex-direction: row;
           flex-direction: row;
           padding-bottom: 0; } }
+      @media only screen and (min-width: 1480px) {
+        .galeria--container--box {
+          height: 300px; } }
       .galeria--container--box--text {
         width: 90%;
         margin: 10px auto 0;
@@ -1198,16 +1243,22 @@ h6 {
           color: #111; }
           @media only screen and (min-width: 992px) {
             .galeria--container--box--text p {
-              font-size: 1.1em;
+              font-size: 0.9em;
               width: 90%; } }
       .galeria--container--box--imgcont {
         width: 100%;
-        overflow: hidden;
-        -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3); }
+        overflow: hidden; }
         @media only screen and (min-width: 992px) {
           .galeria--container--box--imgcont {
             width: 50%; } }
+        .galeria--container--box--imgcont img {
+          width: 100%; }
+          @media only screen and (min-width: 992px) {
+            .galeria--container--box--imgcont img {
+              width: 125%; } }
+          @media only screen and (min-width: 1200px) {
+            .galeria--container--box--imgcont img {
+              width: 100%; } }
   .galeria--container2 {
     width: 85%;
     padding: 10px 0;
@@ -1234,7 +1285,7 @@ h6 {
     @media only screen and (min-width: 992px) {
       .galeria--container2 {
         width: 600px;
-        margin: 60px auto 0; } }
+        margin: 60px auto; } }
     .galeria--container2 p {
       width: 90%;
       font-weight: 600;
@@ -1251,38 +1302,8 @@ h6 {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; } }
 
-.swiper-slide img {
-  width: 100%; }
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  color: #fefefe;
-  -webkit-transform: scale(0.4);
-  -ms-transform: scale(0.4);
-  transform: scale(0.4); }
-  @media only screen and (min-width: 992px) {
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-      transform: scale(0.7); } }
-
-@media only screen and (min-width: 992px) {
-  .swiper-pagination {
-    padding-bottom: 25px; } }
-
-.swiper-pagination-bullet {
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-  background: #fefefe;
-  border: 2px solid #fefefe; }
-
-.swiper-pagination-bullet-active {
-  background: red; }
-
 .data {
-  background-color: #fefefe;
+  background-color: #f0f0f0;
   padding: 10px 0 30px; }
   .data--container {
     width: 100%;
@@ -1546,8 +1567,12 @@ h6 {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row; } }
-    .footer--container--tel {
+    .footer--container--td {
       margin-top: 170px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1558,18 +1583,31 @@ h6 {
       -ms-flex-align: center;
       align-items: center; }
       @media only screen and (min-width: 768px) {
-        .footer--container--tel {
+        .footer--container--td {
           width: 30%;
           margin: 0; } }
-      .footer--container--tel p {
+      @media only screen and (min-width: 992px) {
+        .footer--container--td {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+          width: 40%; } }
+      .footer--container--td p {
         text-align: center;
         font-size: 1em;
         color: #fefefe; }
         @media only screen and (min-width: 768px) {
-          .footer--container--tel p {
-            font-size: 0.8em;
-            margin: 0; } }
-        .footer--container--tel p span {
+          .footer--container--td p {
+            font-size: 0.7em;
+            margin: 5px 0; } }
+        @media only screen and (min-width: 992px) {
+          .footer--container--td p {
+            font-size: 1em; } }
+        .footer--container--td p span {
           text-transform: uppercase;
           font-weight: 600; }
     .footer--container--logo {
@@ -1587,11 +1625,17 @@ h6 {
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center; } }
+      @media only screen and (min-width: 992px) {
+        .footer--container--logo {
+          width: 20%; } }
       .footer--container--logo img {
         width: 150px; }
         @media only screen and (min-width: 768px) {
           .footer--container--logo img {
             width: 130px; } }
+        @media only screen and (min-width: 992px) {
+          .footer--container--logo img {
+            width: 120px; } }
     .footer--container--direc {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1607,6 +1651,9 @@ h6 {
         .footer--container--direc {
           width: 30%;
           margin-top: 0; } }
+      @media only screen and (min-width: 992px) {
+        .footer--container--direc {
+          width: 40%; } }
       .footer--container--direc p {
         color: #fefefe;
         font-weight: 400;
@@ -1614,8 +1661,11 @@ h6 {
         text-align: center; }
         @media only screen and (min-width: 768px) {
           .footer--container--direc p {
-            font-size: 0.8em;
+            font-size: 0.7em;
             margin: 0; } }
+        @media only screen and (min-width: 992px) {
+          .footer--container--direc p {
+            font-size: 1em; } }
         .footer--container--direc p span {
           text-transform: uppercase;
           font-weight: 600; }

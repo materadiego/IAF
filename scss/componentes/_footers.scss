@@ -15,20 +15,29 @@
       align-items: center;
       flex-direction: row;
     }
-    &--tel {
+    &--td {
       margin-top: 170px;
+      flex-direction: column;
       @include flex;
       @include media(tablet) {
         width: 30%;
         margin: 0;
+      }
+      @include media(desktop-s) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 40%;
       }
       & p {
         text-align: center;
         font-size: 1em;
         color: $color-claro;
         @include media(tablet) {
-          font-size: 0.8em;
-          margin: 0;
+          font-size: 0.7em;
+          margin: 5px 0;
+        }
+        @include media(desktop-s) {
+          font-size: 1em;
         }
         & span {
           text-transform: uppercase;
@@ -43,11 +52,16 @@
         width: 25%;
         @include flex;
       }
-
+      @include media(desktop-s) {
+        width: 20%;
+      }
       & img {
         width: 150px;
         @include media(tablet) {
           width: 130px;
+        }
+        @include media(desktop-s) {
+          width: 120px;
         }
       }
     }
@@ -58,14 +72,20 @@
         width: 30%;
         margin-top: 0;
       }
+      @include media(desktop-s) {
+        width: 40%;
+      }
       & p {
         color: $color-claro;
         font-weight: 400;
         font-size: 1em;
         text-align: center;
         @include media(tablet) {
-          font-size: 0.8em;
+          font-size: 0.7em;
           margin: 0;
+        }
+        @include media(desktop-s) {
+          font-size: 1em;
         }
         & span {
           text-transform: uppercase;

@@ -79,8 +79,8 @@ h6 {
   text-align: center;
   color: $color-variacion2;
   @include media(desktop-s) {
-    font-size: 1.5em;
-    margin: 0;
+    font-size: 1.2em;
+    margin: 0 0 5px;
   }
 }
 

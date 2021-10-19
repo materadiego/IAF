@@ -1,5 +1,53 @@
 .instalaciones {
+  padding-bottom: 20px;
+  background-color: $color-claro2;
   &--container {
-    height: 300px;
+    @include media(mobile-xl) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    @include media(tablet) {
+      width: 80%;
+    }
+    @include media(desktop-s) {
+      width: 700px;
+    }
+    &--galeria {
+      @include media(mobile-xl) {
+        overflow: hidden;
+        @include shadow;
+      }
+    }
   }
+}
+
+.swiper-slide {
+  & img {
+    width: 100%;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: $color-claro;
+  transform: scale(0.4);
+  @include media(desktop-s) {
+    transform: scale(0.7);
+  }
+}
+
+.swiper-pagination {
+  @include media(desktop-s) {
+    padding-bottom: 25px;
+  }
+}
+
+.swiper-pagination-bullet {
+  transform: scale(1.3);
+  background: $color-claro;
+  border: 2px solid $color-claro;
+}
+
+.swiper-pagination-bullet-active {
+  background: red;
 }
