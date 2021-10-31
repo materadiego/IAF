@@ -9,6 +9,13 @@
   &--container {
     width: 80%;
     margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media(tablet) {
+      padding-top: 10px;
+    }
     @include media(desktop-s) {
       width: 70%;
     }
@@ -16,7 +23,8 @@
       text-align: center;
       text-transform: uppercase;
       color: $color-variacion2;
-      @include media(desktop-s) {
+      @include media(tablet) {
+        padding: 40px 0;
       }
     }
     &--text {
@@ -48,33 +56,31 @@
     }
     &--links {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-evenly;
       width: 100%;
-      margin: 40px auto 0;
-      @include media(mobile-xl) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      margin: 10px auto 0;
+
+      @include media(tablet) {
+        position: absolute;
+        width: 100%;
+        max-width: 750px;
+        justify-content: space-between;
+        margin: 0 auto;
       }
       @include media(desktop-s) {
-        flex-direction: row;
-        width: 600px;
-
-        justify-content: space-between;
-        margin: 60px auto 0;
       }
       &--button {
         text-decoration: none;
         text-align: center;
         margin: 10px 0;
-        width: 250px;
         border-radius: 4px;
         font-weight: 600;
         transition: 0.3s;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        border-radius: 50%;
 
         @include shadow;
         @include flex;
@@ -90,17 +96,7 @@
         }
         & img {
           width: 110px;
-          padding: 15px 0;
-        }
-        & p {
-          width: 100%;
-          margin: 0;
-          padding: 10px 0;
-
-          transition: 0.3s;
-
-          color: $color-claro;
-          background-color: $color-variacion2;
+          padding: 5px;
         }
       }
     }

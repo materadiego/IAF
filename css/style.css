@@ -828,7 +828,21 @@ h6 {
       padding-bottom: 100px; } }
   .institucional--container {
     width: 80%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media only screen and (min-width: 768px) {
+      .institucional--container {
+        padding-top: 10px; } }
     @media only screen and (min-width: 992px) {
       .institucional--container {
         width: 70%; } }
@@ -836,6 +850,9 @@ h6 {
       text-align: center;
       text-transform: uppercase;
       color: #3e4095; }
+      @media only screen and (min-width: 768px) {
+        .institucional--container--title {
+          padding: 40px 0; } }
     .institucional--container--text {
       font-weight: 500;
       font-size: 0.9em;
@@ -862,42 +879,27 @@ h6 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
       width: 100%;
-      margin: 40px auto 0; }
-      @media only screen and (min-width: 480px) {
+      margin: 10px auto 0; }
+      @media only screen and (min-width: 768px) {
         .institucional--container--links {
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-          flex-direction: row;
-          -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center; } }
-      @media only screen and (min-width: 992px) {
-        .institucional--container--links {
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-          flex-direction: row;
-          width: 600px;
+          position: absolute;
+          width: 100%;
+          max-width: 750px;
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
           justify-content: space-between;
-          margin: 60px auto 0; } }
+          margin: 0 auto; } }
       .institucional--container--links--button {
         text-decoration: none;
         text-align: center;
         margin: 10px 0;
-        width: 250px;
         border-radius: 4px;
         font-weight: 600;
         -webkit-transition: 0.3s;
@@ -911,6 +913,7 @@ h6 {
         -ms-flex-direction: column;
         flex-direction: column;
         overflow: hidden;
+        border-radius: 50%;
         -webkit-box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 0 2px 7px 0px rgba(0, 0, 0, 0.3);
         display: flex;
@@ -931,16 +934,7 @@ h6 {
           color: #ed3237; }
         .institucional--container--links--button img {
           width: 110px;
-          padding: 15px 0; }
-        .institucional--container--links--button p {
-          width: 100%;
-          margin: 0;
-          padding: 10px 0;
-          -webkit-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s;
-          color: #fefefe;
-          background-color: #3e4095; }
+          padding: 5px; }
 
 .contacto--container {
   width: 90%;
